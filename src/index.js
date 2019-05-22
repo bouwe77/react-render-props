@@ -18,13 +18,13 @@ function Toggle(props) {
 }
 
 function renderToggleButton(toggle, on) {
-  return <button onClick={() => toggle()}>{on ? "ON" : "OFF"}</button>;
+  return <button onClick={toggle}>{on ? "ON" : "OFF"}</button>;
 }
 
 function renderToggleCheckbox(toggle, on) {
   return (
     <>
-      <input type="checkbox" checked={on} onChange={() => toggle()} />
+      <input type="checkbox" checked={on} onChange={toggle} />
       {on ? "ON" : "OFF"}
     </>
   );
